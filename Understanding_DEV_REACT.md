@@ -125,13 +125,13 @@ __Enfaze - Negrito__
     - MiniTarefa - 2.2
 - Tarefa - 3
 
----
-
-`- Tarefa - 1`  
-`- Tarefa - 2`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- MiniTarefa - 2.1`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- MiniTarefa - 2.2`  
-`- Tarefa - 3`  
+```
+- Tarefa - 1  
+- Tarefa - 2 
+    - MiniTarefa - 2.1  
+    - MiniTarefa - 2.2  
+- Tarefa - 3
+```
 
 ### Lista Ordenada
 
@@ -139,44 +139,46 @@ __Enfaze - Negrito__
 2. Tarefa - 2
 3. Tarefa - 3
 
---- 
+```
+1. Tarefa - 1 
+2. Tarefa - 2 
+3. Tarefa - 3 
+```
 
-`1. Tarefa - 1`  
-`2. Tarefa - 2`  
-`3. Tarefa - 3`  
-
---- 
+---
 
 1. Tarefa - 1
 2. Tarefa - 2
     1. Tarefa - 2.1
     2. Tarefa - 2.2
-3. Tarefa - 3
+3. Tarefa - 3  
 
----
-
-`1. Tarefa - 1`  
-`1. Tarefa - 2`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`1. Tarefa - 2.1`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`1. Tarefa - 2.2`  
-`1. Tarefa - 3`  
+```
+1. Tarefa - 1
+2. Tarefa - 2
+    1. Tarefa - 2.1
+    2. Tarefa - 2.2
+3. Tarefa - 3 
+```
 
 ---
 
 ### Lista de Tarefa
+
 - [X] Tarefa - 1
 - [X] Tarefa - 2
     - [X] Tarefa - 2.1
     - [X] Tarefa - 2.2
 - [ ] Tarefa - 3
 
----
 
-`- [X] Tarefa - 1`  
-`- [X] Tarefa - 2`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- [X] Tarefa - 2.1`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- [X] Tarefa - 2.2`  
-`- [ ] Tarefa - 3`  
+```
+- [X] Tarefa - 1 
+- [X] Tarefa - 2 
+    - [X] Tarefa - 2.1
+    - [X] Tarefa - 2.2 
+- [ ] Tarefa - 3
+```  
 
 ### Listas mistas
 
@@ -185,29 +187,28 @@ __Enfaze - Negrito__
   2. Tarefa 2
   3. Tarefa 3
 + Filmes
-  1. Filme 1
-  2. FIlme 2
-  3. Filme 3
+  - Filme 1
+  - Filme 2
+  - Filme 3
 + Provas
   - [X] Prova 1
   - [X] Prova 2
   - [X] Prova 3
 
----
-
-`+ Tarefa  `  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`1. Tarefa 1`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2. Tarefa 2`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`3. Tarefa 3`  
-`+ Filmes`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`1. Filme 1`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2. FIlme 2`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`3. Filme 3`  
-`+ Provas`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- [X] Prova 1`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- [X] Prova 2`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- [X] Prova 3`  
-
+```
++ Tarefa   
+  1. Tarefa 1  
+  2. Tarefa 2  
+  3. Tarefa 3  
++ Filmes  
+  - Filme 1  
+  - FIlme 2  
+  - Filme 3  
++ Provas  
+  - [X] Prova 1 
+  - [X] Prova 2  
+  - [X] Prova 3  
+```
 ---
 
 ### Links
@@ -291,14 +292,16 @@ Basta utilizar --- ou ***
 
 ---
 
-`Cod | Nome    | Nota | Dica`  
-`--- |:-------:|-----:| ----`  
-`1   | Bruno   | 10.0 | H3F8`  
-`2   | João    | 10.0 | H4E2`  
-`3   | Roberto | 10.0 | 0F2E`  
-`4   | Diego   | 10.0 | H30F`  
-`5   | Arthur  | 10.0 | D9F3`  
-`6   | Julia   | 10.0 | 8FA2` 
+```
+Cod | Nome    | Nota | Dica  
+--- |:-------:|-----:| ----  
+1   | Bruno   | 10.0 | H3F8  
+2   | João    | 10.0 | H4E2  
+3   | Roberto | 10.0 | 0F2E  
+4   | Diego   | 10.0 | H30F  
+5   | Arthur  | 10.0 | D9F3  
+6   | Julia   | 10.0 | 8FA2 
+```
 
 >Com a extensão "Markdown All in One" do VSCode, você pode utilizar "ALT + SHIFT + F" para formatar a tabela!!    
 >
