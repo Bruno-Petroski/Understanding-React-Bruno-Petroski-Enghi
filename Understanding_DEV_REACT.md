@@ -224,10 +224,10 @@ Meu [GitHub](https://github.com/Bruno-Petroski "GitHub")
 
 [comment]: <> ( [Nome que aparece] "link" "Comentario" )
 
-![Gato Legal](../Understanding-React-Bruno-Petroski-Enghi/assets/cool_cat.jpg)
+![Gato Legal](assets/cool_cat.jpg)
 
 Via Arquivo  
-`![Gato Legal](../Understanding-React-Bruno-Petroski-Enghi/assets/cool_cat.jpg)`
+`![Gato Legal](assets/cool_cat.jpg)`
 
 ---
 
