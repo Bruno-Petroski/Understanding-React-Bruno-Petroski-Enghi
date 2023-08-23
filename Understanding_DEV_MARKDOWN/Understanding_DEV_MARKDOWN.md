@@ -1,60 +1,3 @@
-# GIT
-## Configurações Previas
-
-- `git config --global user.email "e-mail"`;
-- `git config --global user.user "Nome"`;
-  - Definie e-mail e nome de usuario;
-
-## Comandos Git
-
-- `git init`;
-  - Inicializar um repositório;
-
----
-
-- `git status`;
-  - Verifica o status dos arquivos (Untracked/Unstaged e Tracked/Staged);
-
----
-
-- `git clone`;
-  - Clona um repositório remoto;
-
----
-
-- `git add .` ;
-- `git add "arquivo"`;
-  - Reconhece um arquivo (Stage);
-
----
-
-- `git commit -m "Comentario"`;
-  - Consolida as alteraços adicionadas no stage;
-  
----
-
-- `git remote add origin "url do repositório"`;
-- `git remote -v`;
-  - Linka o repositório local ao remoto;
-
----
-
-- `git branch -M main`;
-  - Renomeia a branch a qual os arquivos serão sincronizados.;
-
----
-
-- `git push -u origin main` (ou branch desejada);
-- `git push`;
-  - Envia as alterações do repositório local ao remoto (Sincronizar);
-
----
-
-- `git pull`;
-  - Contrario do `git push`, envia as alterações do repositorio remoto ao local.
-
-
-
 # Markdown
 
 # Títulos
@@ -225,7 +168,7 @@ Meu [GitHub](https://github.com/Bruno-Petroski "GitHub")
 
 [comment]: <> ( [Nome que aparece] "link" "Comentario" )
 
-![Gato Legal](assets/cool_cat.png)
+![Gato Legal](assetsMD/cool_cat.png)
 
 Via Arquivo  
 `![Gato Legal](assets/cool_cat.png)`
@@ -305,7 +248,7 @@ Cod | Nome    | Nota | Dica
 
 >Com a extensão "Markdown All in One" do VSCode, você pode utilizar "ALT + SHIFT + F" para formatar a tabela!!    
 >
-> ![Tabela Formatada](assets/Tabela%20Formatada.png)
+> ![Tabela Formatada](assetsMD/Tabela%20Formatada.png)
 
 ### Emojis
 
@@ -321,9 +264,4 @@ Apenas dar copiar e colar emojis da [Emojoipedia](https://emojipedia.org);
 Apenas usar os comandos demonstrados [nesta pagina](https://gist.github.com/rxaviers/7360908);  
 `:blush:` 😊  
 `:smirk:` 😏  
-`:smiley:` 😃  
-
-
-
-
-  
+`:smiley:` 😃
