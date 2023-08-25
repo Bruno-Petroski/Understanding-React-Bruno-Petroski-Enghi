@@ -19,6 +19,17 @@ div#titulo > h1 {
     color: rgba(1, 175, 1, 0.781);
 }
 
+details {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+details summary {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
 section{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -57,7 +68,6 @@ div#download {
 
 div#download:hover{
     background-color: rgba(1, 175, 1, 0.644);
-    text-decoration: underline;
 }
 
 footer{
