@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 003</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Insira um número!</h1>
+        <form action="">
+            <!--Num 1-->
+            <label for="nmNum1"></label>
+            <input type="number" name="nmNum1" id="idNum1" placeholder="Número">
+            
+            <input type="button" value="Executar" onclick="getCompara_20()" id="idButton">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+            function getCompara_20(){
+                // Capturando dados
+                let num = Number(document.getElementById("idNum1").value)
+
+                //Processador e Output
+                if(num < 20){
+                    document.getElementById("idOut").value = "O número inserido é menor que 20"
+                }else if(num > 20){
+                    document.getElementById("idOut").value = "O número inserido é maior que 20"
+                }else{
+                    document.getElementById("idOut").value = "O número inserido é igual a 20"
+                }
+            }
+        </script>
+
+    </main>
+</body>
+</html>

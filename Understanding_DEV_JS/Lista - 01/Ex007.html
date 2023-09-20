@@ -23,12 +23,12 @@
             <label for="nmMetro"></label>
             <input type="number" name="nmMetro" id="idMetro" placeholder="Metros:">
             
-            <input type="button" value="Enviar" id="idButton" onclick="getElements()">
+            <input type="button" value="Enviar" id="idButton" onclick="getTransformM()">
             <output id="idOut"></output>
         </form>
 
         <script>
-            function getElements(){
+            function getTransformM(){
                 let Metro = Number(document.getElementById("idMetro").value);
                 
                 let Km = Metro / 1000

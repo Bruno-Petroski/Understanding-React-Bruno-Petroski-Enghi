@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 001</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Insira um número</h1>
+        <form action="">
+            <!--Num 1-->
+            <label for="nmNum1"></label>
+            <input type="number" name="nmNum1" id="idNum1" placeholder="Número 1">
+            <!--Num 2-->
+            <label for="nmNum2"></label>
+            <input type="number" name="nmNum2" id="idNum2" placeholder="Número 2">
+
+            <input type="button" value="Executar" onclick="getMaior_2()" id="idButton">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+            function getMaior_2(){
+                // Capturando
+                let num1 = Number(document.getElementById("idNum1").value)
+                let num2 = Number(document.getElementById("idNum2").value)
+                // Processamento
+                if(num1 > num2){
+                    document.getElementById("idOut").value = "O maior valor é o número " + num1
+                }else if(num2 > num1){
+                    document.getElementById("idOut").value = "O maior valor é o número " + num2
+                }else{
+                    document.getElementById("idOut").value = "Os dois valores são iguais!"
+                }
+
+            }
+        </script>
+
+    </main>
+</body>
+</html>

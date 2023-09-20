@@ -14,12 +14,12 @@
             <label for="nmDinheiro"></label>
             <input type="number" name="nmDinheiro" id="idDinheiro" placeholder="Dinheiro:">
             
-            <input type="button" value="Enviar" id="idButton" onclick="getElements()">
+            <input type="button" value="Enviar" id="idButton" onclick="getConversor()">
             <output id="idOut"></output>
         </form>
 
         <script>
-            function getElements(){
+            function getConversor(){
                 let real = Number(document.getElementById("idDinheiro").value)
 
                 let dolar = real/3.45

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 002</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Insira 3 números!</h1>
+        <form action="">
+            <!--Num 1-->
+            <label for="nmNum1">Número 1:</label>
+            <input type="number" name="nmNum1" id="idNum1" placeholder="Número">
+            <!--Num 2-->
+            <label for="nmNum2">Número 2:</label>
+            <input type="number" name="nmNum2" id="idNum2" placeholder="Número">
+            <!--Num 3-->
+            <label for="nmNum3">Número 3:</label>
+            <input type="number" name="nmNum3" id="idNum3" placeholder="Número">
+
+            <input type="button" value="Executar" onclick="getMaior_3()" id="idButton">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+            function getMaior_3(){
+                // Capturando
+                let num1 = Number(document.getElementById("idNum1").value)
+                let num2 = Number(document.getElementById("idNum2").value)
+                let num3 = Number(document.getElementById("idNum3").value)
+                
+                // Processando
+                // Num 1 Maior
+                if( num1 > num2 && num1 > num2){
+                    document.getElementById("idOut").value = "O maior valor é o número 1"
+                // Num 2 Maior
+                }else if( num2 > num1 && num2 > num3){
+                    document.getElementById("idOut").value = "O maior valor é o número 2"
+                // Num 3 Maior
+                }else if( num3 > num1 && num3 > num2){
+                    document.getElementById("idOut").value = "O maior valor é o número 3"
+                // Num 1 e 2 Iguais
+                }else if( num1 == num2 && num1 != num3 ){
+                    document.getElementById("idOut").value = "Os números 1 e 2 são iguais"
+                // Num 1 e 3 Iguais
+                }else if( num1 == num3 && num1 != num2 ){
+                    document.getElementById("idOut").value = "Os números 1 e 3 são iguais"
+                // Num 2 e 3 Iguais
+                }else if( num2 == num3 && num2 != num1){
+                    document.getElementById("idOut").value = "Os números 2 e 3 são iguais"
+                // Todos os Num Iguais
+                }else{
+                    document.getElementById("idOut").value = "Todos os números são iguais"
+                }
+                
+
+
+
+            }
+        </script>
+    </main>
+</body>
+</html>

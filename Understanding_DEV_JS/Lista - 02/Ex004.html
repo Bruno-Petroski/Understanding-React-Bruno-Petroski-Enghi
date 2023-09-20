@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 004</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Insira um número!</h1>
+        <form action="">
+            <!--Num 1-->
+            <label for="nmNum1"></label>
+            <input type="number" name="nmNum1" id="idNum1" placeholder="Número">
+            
+            <input type="button" value="Executar" onclick="getIntervalo_30_90()" id="idButton">
+            <output id="idOut"></output>
+        </form>
+        
+        <script>
+            function getIntervalo_30_90(){
+                //Capturando Dados
+                let num = Number(document.getElementById("idNum1").value)
+                // Processando e output
+                if( num >= 30 && num <= 90){
+                    document.getElementById("idOut").value = "O numero " + num + " esta no intervalo entre 30 e 90"
+                }else if( num < 30){
+                    document.getElementById("idOut").value = "O numero " + num + " é menor que 30"
+                }else{
+                    document.getElementById("idOut").value = "O numero " + num + " é maior que 90"
+                }
+            }
+        </script>
+        
+    </main>
+</body>
+</html>

@@ -13,12 +13,12 @@
             <label for="nmPreco"></label>
             <input type="number" name="nmPreco" id="idPreco" placeholder="Valor:">
 
-            <input type="button" value="Executar" id="idButton" onclick="getElements()">
+            <input type="button" value="Executar" id="idButton" onclick="getDesconto()">
             <output id="idOut"></output>
         </form>
 
         <script>
-            function getElements(){
+            function getDesconto(){
                 // Capturando Info
                 let preco = Number(document.getElementById("idPreco").value)
 

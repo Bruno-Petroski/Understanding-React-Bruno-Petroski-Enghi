@@ -15,12 +15,12 @@
             <label for="nmSal"></label>
             <input type="number" name="nmSal" id="idSal" placeholder="Salario:" minlength="2" required>
 
-            <input type="button" value="Enviar" id="idButton" onclick="getElements()">
+            <input type="button" value="Enviar" id="idButton" onclick="getInfo()">
             <output id="idOut"></output>
         </form>
 
         <script>
-            function getElements(){
+            function getInfo(){
                 let nome = document.getElementById("idNome").value;
                 let sal = document.getElementById("idSal").value;
 

@@ -15,12 +15,12 @@
         <label for="nmLargura">Largura:</label>
         <input type="number" name="nmLargura" id="idLargura" placeholder="Metros">
         
-        <input type="button" value="Enviar" id="idButton" onclick="getElements()">
+        <input type="button" value="Enviar" id="idButton" onclick="getArea()">
         <output id="idOut"></output>
     </form>
 
     <script>
-        function getElements(){
+        function getArea(){
             // Capturando Valores
             let Alt = Number(document.getElementById("idAltura").value)
             let Lar = Number(document.getElementById("idLargura").value)
