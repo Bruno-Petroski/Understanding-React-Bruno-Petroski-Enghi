@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 009</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main> <h1>Insira as dimensões da parede!</h1>
+        <form action="">
+        <label for="nmAltura">Altura:</label>
+        <input type="number" name="nmAltura" id="idAltura" placeholder="Metros">
+
+        <label for="nmLargura">Largura:</label>
+        <input type="number" name="nmLargura" id="idLargura" placeholder="Metros">
+        
+        <input type="button" value="Enviar" id="idButton" onclick="getElements()">
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+        function getElements(){
+            // Capturando Valores
+            let Alt = Number(document.getElementById("idAltura").value)
+            let Lar = Number(document.getElementById("idLargura").value)
+
+            // Processando
+            let Area = Alt*Lar
+            let Quantidade = Area/2
+
+            // Output
+
+            document.getElementById("idOut").value = "Você vai precisar de " + Quantidade + " baldes de tinta para pintar a parede"
+
+        }
+    </script>
+
+</main>
+</body>
+</html>

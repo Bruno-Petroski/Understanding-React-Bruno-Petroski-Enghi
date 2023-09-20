@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 008</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Insira a quantidade de dinheiro em sua carteira!</h1>
+
+        <form action="">
+            <label for="nmDinheiro"></label>
+            <input type="number" name="nmDinheiro" id="idDinheiro" placeholder="Dinheiro:">
+            
+            <input type="button" value="Enviar" id="idButton" onclick="getElements()">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+            function getElements(){
+                let real = Number(document.getElementById("idDinheiro").value)
+
+                let dolar = real/3.45
+
+                document.getElementById("idOut").value = "R$" + real +",00 equivalem a " + dolar.toFixed(2) + " USD"
+            }
+        </script>
+    </main>
+</body>
+</html>

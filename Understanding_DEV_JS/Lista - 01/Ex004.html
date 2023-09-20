@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 004</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    
+    <main>
+        <h1>Insira um número!</h1>
+        
+        </h1>
+        <form action="">
+            <label for="nmNum1"></label>
+            <input type="number" name="nmNum1" id="idNum1">
+            <label for="nmNum2"></label>
+            <input type="number" name="nmNum2" id="idNum2">
+            
+            <input type="button" value="Enviar" id="idButton" onclick="getElements()">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+            function getElements(){
+                let num1 = Number(document.getElementById("idNum1").value)
+                let num2 = Number(document.getElementById("idNum2").value)
+                
+                let M = (num1 + num2)/2
+
+                document.getElementById("idOut").value = "A media é " + M
+            }
+        </script>
+
+    </main>
+    
+</body>
+</html>

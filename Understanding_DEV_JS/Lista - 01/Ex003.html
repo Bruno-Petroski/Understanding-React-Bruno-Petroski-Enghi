@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 003</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Insira 2 números!</h1>
+        <form action="">
+            <label for="nmNum1"></label>
+            <input type="number" name="nmNum1" id="idNum1" placeholder="Número 1:" required>
+            <label for="nmNum2"></label>
+            <input type="number" name="nmNum2" id="idNum2" placeholder="Número 2:" required>
+
+            
+            <input type="button" value="Executar" id="idButton" onclick="getSoma()">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+            function getSoma(){
+                let num1 = document.getElementById("idNum1").value;
+                let num2 = document.getElementById("idNum2").value;
+            
+                let res = Number(num1) + Number(num2)
+
+                // Assim n pode ter comentarios!
+                //document.getElementById("idOut").value = Number(num1) + Number(num2);
+
+                //Assim pode!
+                document.getElementById("idOut").value = "A soma deles é " + res
+
+            }
+        </script>
+
+    </main>
+</body>
+</html>

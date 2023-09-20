@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 010</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main> 
+        <h1>Insira o preço do produto!</h1>
+        <form action="">
+            <label for="nmPreco"></label>
+            <input type="number" name="nmPreco" id="idPreco" placeholder="Valor:">
+
+            <input type="button" value="Executar" id="idButton" onclick="getElements()">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+            function getElements(){
+                // Capturando Info
+                let preco = Number(document.getElementById("idPreco").value)
+
+                //Processamento
+                let desc = preco - (preco*0.05)
+
+                //Output
+                document.getElementById("idOut").value = "O preço com 5% de desconto equivale a " + desc
+            }
+        </script>
+
+    </main>
+
+    
+</body>
+</html>

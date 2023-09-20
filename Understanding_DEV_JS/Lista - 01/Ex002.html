@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 002</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Informe o nome e o salario!</h1>
+        <form action="">
+            <label for="nmNome"></label>
+            <input type="text" name="nmNome" id="idNome" placeholder="Nome:" minlength="2" required>
+            <label for="nmSal"></label>
+            <input type="number" name="nmSal" id="idSal" placeholder="Salario:" minlength="2" required>
+
+            <input type="button" value="Enviar" id="idButton" onclick="getElements()">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+            function getElements(){
+                let nome = document.getElementById("idNome").value;
+                let sal = document.getElementById("idSal").value;
+
+                document.getElementById("idOut").value = "Olá " + nome + " atualmente você recebe um salario de R$" + sal + ",00."  
+            }
+            
+        </script>
+
+
+    </main>
+</body>
+</html>

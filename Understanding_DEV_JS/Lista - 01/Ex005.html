@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 005</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    
+    <main>
+        <h1>Insira um número!</h1>
+        
+        </h1>
+        <form action="">
+            <label for="nmNum"></label>
+            <input type="number" name="nmNum" id="idNum">
+            
+            <input type="button" value="Enviar" id="idButton" onclick="getElements()">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+            function getElements(){
+                let num = document.getElementById("idNum").value;
+                let ant = --num
+                let suc = num + 2
+
+                document.getElementById("idOut").value = "O antecessor deste número é " + ant + " e seu sucessor é " + suc;
+            }
+        </script>
+
+    </main>
+    
+</body>
+</html>

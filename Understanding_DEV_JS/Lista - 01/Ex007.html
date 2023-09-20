@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex007</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 004</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    
+    <main>
+        <h1>Insira a distancia em metros!</h1>
+        
+        <form action="">
+            <label for="nmMetro"></label>
+            <input type="number" name="nmMetro" id="idMetro" placeholder="Metros:">
+            
+            <input type="button" value="Enviar" id="idButton" onclick="getElements()">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+            function getElements(){
+                let Metro = Number(document.getElementById("idMetro").value);
+                
+                let Km = Metro / 1000
+                let Hm = Metro / 100
+                let Dam = Metro / 10
+                let dm = Metro * 10
+                let cm = Metro * 100
+                let mm = Metro * 1000
+
+                document.getElementById("idOut").innerText = "Km = " + Km + "\nHm = " + Hm + "\nDam = " + Dam + "\ndm = " + dm + "\ncm = " + cm +"\nmm = " + mm
+            }
+        </script>
+
+    </main>
+    
+</body>
+</html>
+</body>
+</html>

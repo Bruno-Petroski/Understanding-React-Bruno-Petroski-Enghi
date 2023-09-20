@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 001</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Qual seu nome?</h1>
+        <form action="">
+            <label for="nmNome"></label>
+            <input type="text" name="nmNome" id="idNome" placeholder="Nome:" minlength="2" required>
+            
+            <input type="button" value="Enviar" id="idButton" onclick="getNome()">
+            <output id="idOut"></output>
+        </form>
+    </main>
+    
+
+    <script>
+
+        function getNome(){
+            let nome = document.getElementById("idNome").value;
+
+            document.getElementById("idOut").value = "Aoba " + nome + " seja bem vindo!!";
+
+        }
+
+    </script>
+
+</body>
+</html>
