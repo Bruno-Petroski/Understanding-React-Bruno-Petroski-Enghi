@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 006</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Calculadora</h1>
+        <form action="">
+            <!--Num 1-->
+            <label for="nmNum1">Número 1:</label>
+            <input type="number" name="nmNum1" id="idNum1">
+            <!--Num 2-->
+            <label for="nmNum2">Número 2:</label>
+            <input type="number" name="nmNum2" id="idNum2">
+
+            <div>
+                <div id="idOp">
+                    <!--Soma-->
+                    <input type="radio" name="nmOp" id="idSoma" class="clOP" checked>
+                    <label for="nmSoma" class="clCheck">+</label>
+                </div>
+                <div id="idOp">
+                    <!--Subtração-->
+                    <input type="radio" name="nmOp" id="idSub" class="clOP">
+                    <label for="nmSub" class="clCheck" >-</label>
+                </div>
+                <div id="idOp">
+                    <!--Multiplicação-->
+                    <input type="radio" name="nmOp" id="idMulti" class="clOP">
+                    <label for="nmMulti" class="clCheck">x</label>
+                </div>
+                <div id="idOp">
+                    <!--Divisão-->
+                    <input type="radio" name="nmOp" id="idDiv" class="clOP">
+                    <label for="nmDiv" class="clCheck">÷</label>
+                </div>
+
+            </div>
+
+
+            <input type="button" value="Calcular" onclick="calcular()" id="idButton">
+            
+            <output id="idOut"></output>
+
+            
+
+        </form>
+
+        <script>
+
+            function calcular(){
+                // Capturando dados
+                let num1 = Number(document.getElementById("idNum1").value)
+                let num2 =Number(document.getElementById("idNum2").value)
+                let soma = document.getElementById("idSoma").checked
+                let sub = document.getElementById("idSub").checked
+                let multi = document.getElementById("idMulti").checked
+                let div = document.getElementById("idDiv").checked
+
+                // Processamento
+
+                if(soma){
+                    document.getElementById("idOut").value = num1 + num2
+                }else if(sub){
+                    document.getElementById("idOut").value = num1 - num2
+                }else if(multi){
+                    document.getElementById("idOut").value = num1 * num2
+                }else{
+                    document.getElementById("idOut").value = num1 / num2
+                }
+
+
+            }
+
+        </script>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 007</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Insira seu Salario Bruto!</h1>
+        <form action="">
+            <label for="nmSal"></label>
+            <input type="number" name="nmSal" id="idSal">
+
+            <input type="button" value="Executar" id="idButton" onclick="descontar()">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+
+            function descontar(){
+                let sal = Number(document.getElementById("idSal").value)
+                let descontado
+
+                let out = document.getElementById("idOut")
+
+                if( sal <= 600 ){
+                    out.value = "Isento de INSS, salario total = " + sal
+                }else if( sal <= 1200){
+                    descontado = sal - (sal*0.025)
+                    out.value = "Desconto de 25% devido ao INSS, salario total = " +  descontado
+                }else if( sal <= 2000){
+                    descontado = sal - (sal*0.030)
+                    out.value = "Desconto de 30% devido ao INSS, salario total = " +  descontado
+                }else{
+                    descontado = sal - (sal*0.035)
+                    out.value = "Desconto de 35% devido ao INSS, salario total = " +  descontado
+                }
+            }
+
+        </script>
+
+    </main>
+</body>
+</html>

@@ -59,5 +59,15 @@ input {
     font-size: 1.3em;
 }
 
+#idOp {
+    display: flex;
 
+}
 
+.clOP{
+    box-shadow: none;
+}
+
+.clCheck{
+    margin-left: 2%;
+}
