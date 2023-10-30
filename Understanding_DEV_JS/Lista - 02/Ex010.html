@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 010</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Login</h1>
+        <form action="">
+            <label for="nmUsuario">Usuario:</label>
+            <input type="text" name="nmUsuario" id="idUsuario">
+
+            <label for="nmSenha">Senha:</label>
+            <input type="password" name="nmSenha" id="idSenha">
+
+            <input type="button" value="Logar" id="idButton" onclick="login()">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+
+            let U1 = "Aluno1"
+            let S1 = "Trocar123"
+            let cont1 = 0
+
+            let U2 = "Aluno2"
+            let S2 = "Senha@123"
+            let cont2 = 0
+
+            let U3 = "Aluno3"
+            let S3 = "123Trocar"
+            let cont3 = 0
+
+            function login(){
+                let UIn = document.getElementById("idUsuario").value
+                let SIn = document.getElementById("idSenha").value
+                let out = document.getElementById("idOut")
+
+                
+                switch (UIn) {
+                    case U1:
+                        if(cont1 <3){
+                            if(SIn == S1){
+                                out.value = "Acesso Permitido"
+                            }else{
+                                out.value = "Senha Invalida"
+                                cont1++
+                            }
+                        }else{
+                            out.value = "Tente novamente mais Tarde"
+                        }
+        
+                        break;
+                    case U2:
+                        if(cont2 <3){
+                            if(SIn == S2){
+                                    out.value = "Acesso Permitido"
+                                }else{
+                                    out.value = "Senha Invalida"
+                                    cont2++
+                                }
+                        }else{
+                            out.value = "Tente novamente mais Tarde"
+                        }
+
+
+                        break;
+                    case U3:
+                        if(cont3 <3){
+                            if(SIn == S3){
+                                    out.value = "Acesso Permitido"
+                                }else{
+                                    out.value = "Senha Invalida"
+                                    cont3++
+                                }
+                        }else{
+                            out.value = "Tente novamente mais Tarde"
+                        }
+
+                        break;
+                    default:
+                        out.value = "Usuario não cadastrado"
+                        break;
+                }
+
+            }
+        </script>
+    </main>
+</body>
+</html>

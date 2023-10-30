@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 005</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Insira um ano!</h1>
+        <form action="">
+            <label for="nmAno"></label>
+            <input type="number" name="nmAno" id="idAno">
+
+            <input type="button" value="Calcular" onclick="calcBissexto()" id="idButton">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+            function calcBissexto(){
+                let ano = Number(document.getElementById("idAno").value)
+                let out = document.getElementById("idOut")
+
+                if((ano%4 == 0 && ano%100 != 0) || ano%400 ==0 ){
+                    out.value = "O ano é bissexto"
+                }else{
+                    out.value = "O ano não é bissexto"
+                }
+
+
+
+
+
+            }
+        </script>
+
+    </main>
+</body>
+</html>

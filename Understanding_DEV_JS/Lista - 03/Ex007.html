@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 007</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Casas Bahia</h1>
+        <form action="">
+            <label for="nmNome">Nome:</label>
+            <input type="text" name="nmNome" id="idNome">
+            
+            <h2>Genero:</h2>
+            <div id="idDiv">
+                <input type="radio" name="nmGen" class="clOP" id="idMasc" checked>
+                <label for="nmMasc" id="idRadioLabel">Masculino</label>
+                <br>
+                <input type="radio" name="nmGen" class="clOP" id="idFem">
+                <label for="nmFem" id="idRadioLabel">Feminino</label>
+            </div>
+            
+            <label for="nmPreco">Preço:</label>
+            <input type="number" name="nmPreco" id="idPreco">
+            
+            <input type="button" value="Calcular" id="idButton" onclick="calcDesconto()">
+            <output id="idOut" ></output>
+        </form>
+
+        <script>
+
+            function calcDesconto(){
+                let nome = document.getElementById("idNome").value
+                let gFem = document.getElementById("idFem").checked
+                let gMasc = document.getElementById("idMasc").checked
+                let preco = Number(document.getElementById("idPreco").value)
+                let out = document.getElementById("idOut")
+               
+                if(gFem){
+                    let desc = preco - (preco * 0.13)
+                    out.value = "Olá " + nome + " você recebeu um desconto e o preço de seu produto foi reduzido para " + desc + " reais, ao invez dos " + preco + " reais de antes"
+                }else{
+                    let desc = preco - (preco * 0.05)
+                    out.value = "Olá " + nome + " você recebeu um desconto e o preço de seu produto foi reduzido para " + desc + " reais, ao invez dos " + preco + " reais de antes"
+                }
+
+            }
+
+        </script>
+
+    </main>
+</body>
+</html>

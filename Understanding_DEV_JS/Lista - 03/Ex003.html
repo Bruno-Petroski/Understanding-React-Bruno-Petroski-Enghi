@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 003</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Notas!</h1>
+        <form action="">
+            <label for="nmNome">Nome:</label>
+            <input type="text" name="nmNome" id="idNome">
+            <label for="nmN1">Nota 1:</label>
+            <input type="number" name="nmN1" id="idN1">
+            <label for="nmN2">Nota 2:</label>
+            <input type="number" name="nmN2" id="idN2">
+
+            <input type="button" value="Executar" id="idButton" onclick="calcNotas()">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+            function calcNotas(){
+                let nome = document.getElementById("idNome").value
+                let N1 = Number(document.getElementById("idN1").value)
+                let N2 = Number(document.getElementById("idN2").value)
+                let out = document.getElementById("idOut")
+
+                let media = (N1 + N2) / 2
+
+                if(media < 7){
+                    out.value = nome + " você reprovou! A sua media foi de " + media
+                }else if(media == 7){
+                    out.value = nome + " você passou por pouco! A sua media foi de " + media
+                }else{
+                    out.value = nome + " você passou! A sua media foi de " + media
+                }
+
+            }
+        </script>
+
+
+    </main>
+</body>
+</html>

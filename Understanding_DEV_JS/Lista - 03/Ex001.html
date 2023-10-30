@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 001</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Insira a Velocidade do Carro</h1>
+        <form action="">
+            <label for="nmVelocidade"></label>
+            <input type="number" name="nmVelocidade" id="idVelocidade" placeholder="Velocidade:">
+
+            <input type="button" value="Calcular" onclick="calcVelocidade()" id="idButton">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+            
+            function calcVelocidade(){
+                let vel = Number(document.getElementById("idVelocidade").value)
+                let out = document.getElementById("idOut")
+
+                if(vel > 80){
+                    let multa = (vel-80)*5
+                    out.value = "A multa foi de " + multa + " reais"
+                }else{
+                    out.value = "Não recebeu multa"
+                }
+
+
+
+
+
+
+            }
+
+
+        </script>
+
+    </main>
+</body>
+</html>

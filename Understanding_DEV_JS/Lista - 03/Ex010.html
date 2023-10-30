@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 010</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Calculadora de IMC</h1>
+        <form action="">
+            <label for="nmAltura">Altura:</label>
+            <input type="number" name="nmAltura" id="idAltura">
+            <label for="nmPeso">Peso:</label>
+            <input type="number" name="nmPeso" id="idPeso">
+            <input type="button" value="Calcular" id="idButton" onclick="calcIMC()">
+            <output id="idOut"></output>
+        </form>
+        <script>
+            function calcIMC(){
+                let altura = Number(document.getElementById("idAltura").value)
+                let peso =Number(document.getElementById("idPeso").value)
+                let out = document.getElementById("idOut")
+                let IMC = peso/(altura**2)
+                if(IMC > 40){
+                    out.value = "Obesidade mórbida"
+                }else if(IMC > 30){
+                    out.value = "Obesidade"
+                }else if(IMC > 25){
+                    out.value = "Sobrepeso"
+                }else if(IMC > 18.5){
+                    out.value = "Peso ideal"
+                }else{
+                    out.value = "Abaixo do peso"
+                }
+            }
+        </script>
+    </main>
+
+</body>
+</html>

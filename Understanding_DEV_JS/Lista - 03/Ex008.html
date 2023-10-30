@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 008</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Insira a Distancia</h1>
+        <form action="">
+            <label for="nmDistancia"></label>
+            <input type="number" name="nmDistancia" id="idDistancia" placeholder="Distancia:">
+
+            <input type="button" value="Calcular" onclick="calcDistancia()" id="idButton">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+            
+            function calcDistancia(){
+                let dis = Number(document.getElementById("idDistancia").value)
+                let out = document.getElementById("idOut")
+
+                if(dis <= 200){
+                    let preco = dis * 0.50
+                    out.value = "O preço da viagem sera de " + preco + " reais"
+                }else{
+                    let preco = dis * 0.45
+                    out.value = "O preço da viagem sera de " + preco + " reais"
+                }
+
+                
+
+            }
+
+        </script>
+
+    </main>
+</body>
+</html>

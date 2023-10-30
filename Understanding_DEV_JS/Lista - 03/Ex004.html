@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 004</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Insira um número!</h1>
+        <form action="">
+            <label for="nmN"></label>
+            <input type="number" name="nmN" id="idN" placeholder="Número:">
+
+            <input type="button" id="idButton" value="Executar" onclick="calcIP()">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+            function calcIP(){
+                let N1 = Number(document.getElementById("idN").value)
+                let out = document.getElementById("idOut")
+
+                if(N1%2 == 0){
+                    out.value = "O número é par"
+                }else{
+                    out.value = "O número é impar"
+                }
+            }
+        </script>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 009</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Insira o Tamanho dos Segmentos de Reta!</h1>
+        <form action="">
+            <label for="nmSeg1"></label>
+            <input type="number" name="nmSeg1" id="idSeg1" placeholder="Segmento 1:">
+            <label for="nmSeg2"></label>
+            <input type="number" name="nmSeg2" id="idSeg2" placeholder="Segmento 2:">
+            <label for="nmSeg3"></label>
+            <input type="number" name="nmSeg3" id="idSeg3" placeholder="Segmento 3:">
+
+            <input type="button" value="Executar" id="idButton" onclick="calcularTriangulo()">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+
+            function calcularTriangulo(){
+                let seg1 = Number(document.getElementById("idSeg1").value)
+                let seg2 = Number(document.getElementById("idSeg2").value)
+                let seg3 = Number(document.getElementById("idSeg3").value)
+                let out = document.getElementById("idOut")
+
+                if(seg3 < (seg1+seg2)){
+                    out.value = "As retas formam um triangulo valido"
+                }else{
+                    out.value = "As retas não formam um triangulo valido"
+                }
+
+            }
+
+        </script>
+
+    </main>
+</body>
+</html>

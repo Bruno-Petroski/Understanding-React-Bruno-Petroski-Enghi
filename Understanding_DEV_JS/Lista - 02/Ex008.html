@@ -7,6 +7,36 @@
     <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
 </head>
 <body>
-    
+    <main>
+        <h1>Insira o Preço de Compra</h1>
+        <form action="">
+            <label for="nmPreco"></label>
+            <input type="number" name="nmPreco" id="idPreco">
+
+            <input type="button" value="Calcular" id="idButton" onclick="calcularPreco()">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+
+            function calcularPreco(){
+                let pVenda
+                let pCompra = Number(document.getElementById("idPreco").value)
+                let out = document.getElementById("idOut")
+
+                if(pCompra < 20){
+                    pVenda = pCompra + (pCompra * 0.5)
+                    out.value = "O preço de venda é " + pVenda
+                }else{
+                    pVenda = pCompra + (pCompra * 0.35)
+                    out.value = "O preço de venda é " + pVenda
+                }
+
+
+            }
+
+        </script>
+
+    </main>
 </body>
 </html>

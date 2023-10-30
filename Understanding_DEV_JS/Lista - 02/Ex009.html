@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 009</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        <h1>Calculador de Área</h1>
+        <form action="">
+            <select name="nmForma" id="idForma" onchange="selecionar(this)">
+                <option value="" selected="selected"></option>
+                <option value="nmCirculo">Círculo</option>
+                <option value="nmRetangulo">Retângulo</option>
+                <option value="nmTRetangulo">Triangulo Retângulo</option>
+                <option value="nmTEquilatero">Triangulo Equilátero</option>
+            </select>
+            
+        </form>
+
+        <form action="" class="clFormas" name="nmCirculo" id="idCirculo" style="display: none;">
+            <h2>Área do Círculo</h2>
+            <label for="nmRaio">Raio</label>
+            <input type="number" name="nmRaio" id="idRaio">
+            
+            <input type="button" value="Calcular" onclick="areaCirculo()" id="idButton">
+            
+        </form>
+
+        <form action="" class="clFormas" name="nmRetangulo" id="idRetangulo" style="display: none;">
+            <h2>Área do Retangulo</h2>
+            <label for="nmBaseR">Base</label>
+            <input type="number" name="nmBaseR" id="idBaseR">
+            <label for="nmAlturaR">Altura</label>
+            <input type="number" name="nmAlturaR" id="idAlturaR">
+            
+            <input type="button" value="Calcular" onclick="areaRetangulo()" id="idButton">
+            
+        </form>
+
+        <form action="" class="clFormas" name="nmTRetangulo" id="idTRetangulo" style="display: none;">
+            <h2>Área de um Triangulo Retangulo</h2>
+            <label for="nmBaseTR">Base</label>
+            <input type="number" name="nmBaseTR" id="idBaseTR">
+            <label for="nmAlturaTR">Altura</label>
+            <input type="number" name="nmAlturaTR" id="idAlturaTR">
+            
+            <input type="button" value="Calcular" onclick="areaTRetangulo()" id="idButton">
+        </form>
+
+        <form action="" class="clFormas" name="nmTEquilatero" id="idTEquilatero" style="display: none;">
+            <h2>Área de um Triangulo Equilatero</h2>
+            <label for="nmLadoTE">Lado</label>
+            <input type="number" name="nmLadoTE" id="idLadoTE">
+            
+            <input type="button" value="Calcular" onclick="areaTEquilatero()" id="idButton">
+        </form>
+
+        <form action="">
+            <output id="idOut"></output>
+        </form>
+        
+
+
+
+        <script>
+
+            let out = document.getElementById("idOut")
+
+            function selecionar(forma){
+                let selecionado = forma.options[forma.selectedIndex].value
+                let formFormas = document.getElementsByClassName('clFormas')
+
+                for (let i = 0; i < formFormas.length; i += 1) {
+                    if (selecionado == formFormas[i].name) {
+                        formFormas[i].setAttribute('style', 'display:block')
+                    } else {
+                        formFormas[i].setAttribute('style', 'display:none') 
+                    }
+                }
+            }
+        
+            function areaCirculo(){
+                let raio = Number(document.getElementById("idRaio").value)
+                let area = Math.PI*(raio*raio)
+                out.value = "A área é " + area.toFixed(3)
+            }
+
+            function areaRetangulo(){
+                let base = Number(document.getElementById("idBaseR").value)
+                let altura = Number(document.getElementById("idAlturaR").value)
+                let area = base*altura
+                out.value = "A área é " + area
+            }
+
+            function areaTRetangulo(){
+                let base = Number(document.getElementById("idBaseTR").value)
+                let altura = Number(document.getElementById("idAlturaTR").value)
+                let area = (base*altura)/2
+                out.value = "A área é " + area
+            }
+
+            function areaTEquilatero(){
+                let lado = Number(document.getElementById("idLadoTE").value)
+                
+                let area = ((lado**2) + Math.sqrt(3))/4
+                out.value = "A área é " + area.toFixed(3)
+            }
+
+
+
+
+
+        </script>
+
+    </main>
+</body>
+</html>

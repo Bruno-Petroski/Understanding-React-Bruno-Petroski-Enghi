@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 002</title>
+    <link rel="stylesheet" href="/Understanding_DEV_JS/style.css">
+</head>
+<body>
+    <main>
+        
+        <h1>Insira seu ano de nascimento</h1>
+        <form action="">
+            <label for="nmAno"></label>
+            <input type="number" name="nmAno" id="idAno" placeholder="Ano:">
+
+            <input type="button" value="Analisar" onclick="calcularIdade()" id="idButton">
+            <output id="idOut"></output>
+        </form>
+
+        <script>
+            function calcularIdade(){
+                let ano = Number(document.getElementById("idAno").value)
+                let out = document.getElementById("idOut")
+
+                let idade = 2023 - ano
+
+                if(idade < 18 && idade >= 16){
+                    out.value = "Com " + idade + " anos, você pode votar, entretanto não é obrigado"
+                }else if(idade >= 18){
+                    out.value = "Com " + idade + " anos, você deve votar"
+                }else{
+                    out.value = "Com " + idade + " anos, não pode votar"
+                }
+            }
+        </script>
+
+    </main>
+</body>
+</html>

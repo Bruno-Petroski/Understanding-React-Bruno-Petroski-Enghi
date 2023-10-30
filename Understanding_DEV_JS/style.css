@@ -46,6 +46,14 @@ input {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.189);
 }
 
+#idForma{
+    
+    font-size: 1.13em;
+    padding: 3px;
+    margin-bottom: 8px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.189);
+}
+
 #idButton {
     display: block;
     font-size: 1.13em;
@@ -56,16 +64,34 @@ input {
 }
 
 #idOut {
-    font-size: 1.3em;
+    font-size: 1.3em; 
 }
+
 
 #idOp {
     display: flex;
+    margin: 0px;
+    padding: 0px;
+}
 
+#idRadioLabel{
+    display: inline;
+    margin: 0px;
+}
+
+#idDiv{
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    text-align: left;
 }
 
 .clOP{
+    display: inline;
     box-shadow: none;
+    
+    padding: 0px;
+    margin-left: 30%;
 }
 
 .clCheck{
